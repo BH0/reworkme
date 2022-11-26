@@ -1,0 +1,67 @@
+.side-by-side {
+  display: flex; 
+  gap: 10px; 
+} 
+
+.side-by-side .left,  .side-by-side .right {
+  flex: 1; 
+  border: solid black 0.5px;
+} 
+
+.left { 
+  height: 90vh;
+  padding-top: 10vh; 
+  overflow-y: scroll;
+}
+.side-by-side .right {
+  flex-basis: 30%; 
+}
+
+.hidden {
+  display: none; 
+}
+
+.all-sections {
+  height: 100vh; 
+  overflow-y: scroll; 
+} 
+
+button {
+  color: black; 
+  padding: 5px 5px 5px 5px; 
+  margin-top: 8px; 
+  margin-bottom: 8px;
+  margin-left: 5px; 
+  margin-right: 5px;
+  border-radius: 4px;
+  background-color: hsl(0, 0%, 100%);
+  border: 0.1px solid black; 
+}
+
+button:hover {
+  position: relative;
+  animation: nudge_up 0.5s forwards;
+  animation: shadow 0.3s forwards;
+}
+
+@keyframes nudge_up {
+  from {
+    top: 0; 
+  }
+  to {
+  /* credit: https: //stackoverflow.com/a/27299103 */
+    top: -2px;
+    }
+}
+
+@keyframes shadow {
+  to {
+      box-shadow: 1px 1px 0px #999,
+          2px 2px 0px #999,
+          3px 3px 0px #999,
+          4px 4px 0px #999,
+          5px 5px 0px #999,
+          6px 6px 0px #999;
+  }  
+}
+
